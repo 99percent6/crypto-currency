@@ -1,0 +1,47 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": "8081"
+  },
+  "bodyParser": {
+    "limit": "100kb"
+  },
+  "corsHeaders": [
+    "Link"
+  ],
+  "db": {
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "InstanceExample!",
+    "database": "crypto"
+  },
+  "logger": {
+    "name": "Cryptocurrency",
+    "server": "localhost",
+    "host": "127.0.0.1",
+    "port": "5046",
+    "appName": "cryptocurrency",
+    "logstash": false
+  },
+  "cryptoCompare": {
+    "updateInterval": 60000,
+    "fsyms": ["BTC", "XRP", "ETH", "BCH", "EOS", "LTC", "XMR", "DASH"],
+    "tsyms": ["USD", "EUR", "GBP", "JPY", "RUR"],
+    "requiredFields": [
+      "change24hour",
+      "changepct24hour",
+      "open24hour",
+      "volume24hour",
+      "volume24hourto",
+      "low24hour",
+      "high24hour",
+      "price",
+      "supply",
+      "mktcap"
+    ],
+    "tableName": "currency",
+    "url": {
+      "multiFull": "https://min-api.cryptocompare.com/data/pricemultifull"
+    }
+  }
+}

@@ -3,6 +3,10 @@
 ```sh
 $ yarn --frozen-lockfile
 ```
+or
+```sh
+$ npm install
+```
 
 ## Run
 
@@ -46,7 +50,7 @@ $ yarn start
 ## Features
 
 ### Settings
-In config file `config/default.json` ypu could:
+In config file `config/default.json` you could:
 1. Manage fsyms and tsyms
 2. Manage required fields for response
 3. Manage interval for background update data in database (in ms)
@@ -77,13 +81,13 @@ In config file `config/default.json` ypu could:
 ```
 
 ### Logging
-You have opportunity to send logs in ELK stack, to enable it executes steps below
-1. Uncomment services in `docker-compose.yml`
+You have opportunity to send logs to the ELK stack, to enable it follow this steps
+1. Uncomment services in `docker-compose.yml` (es, logstash, kibana)
 2. Execute command
 ```sh
 $ docker-compose up -d
 ```
-3. In `config/defult.json` enable logstash
+3. In `config/default.json` enable logstash
 ```json
 "logger": {
   "name": "Cryptocurrency",

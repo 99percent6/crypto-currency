@@ -98,3 +98,15 @@ $ docker-compose up -d
   "logstash": true // here
 }
 ```
+
+## Endpoints
+
+1. GET /api/currency/price?fsyms=BTC,ETH&tsyms=USD,EUR
+2. Websocket /api/currency/price
+Message
+```json
+{
+  "fsyms": "BTC,ETH",
+  "tsyms": "USD,RUR"
+}
+```

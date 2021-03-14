@@ -38,7 +38,9 @@ export default ({ app }: { config?: IConfig, db?: DB, app?: Express }) => {
         if (body.fsyms === undefined || body.tsyms === undefined) {
           return ws.send(JSON.stringify(['Missing required fields - fsyms or tsyms', null]))
         }
-        const { fsyms, tsyms }: { fsyms: string, tsyms: string } = body
+        let { fsyms, tsyms }: { fsyms: string, tsyms: string } = body
+        fsyms = fsyms.split(',').map((item) => item.trim()).join(',')
+        tsyms = tsyms.split(',').map((item) => item.trim()).join(',')
         const result = await CryptoCurrency.getPriceMultiFull(fsyms, tsyms)
         const preparedData = CryptoCurrency.extractRequiredFields(result)
         return ws.send(JSON.stringify([null, preparedData]))

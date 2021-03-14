@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API for cryptocurrencies",
   "private": true,
-  "main": "dist",
+  "main": "dist/src",
   "engines": {
     "node": ">=8.x"
   },
@@ -14,7 +14,7 @@
     "build:code": "tsc --build",
     "test": "mocha",
     "lint": "eslint src/. --ext .ts",
-    "start": "cross-env NODE_ENV=production node $node_options_ext dist"
+    "start": "cross-env NODE_ENV=production node $node_options_ext dist/src"
   },
   "author": "Vladimir Zeynalov",
   "license": "ISC",

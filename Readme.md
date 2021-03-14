@@ -102,8 +102,7 @@ $ docker-compose up -d
 ## Endpoints
 
 1. GET /api/currency/price?fsyms=BTC,ETH&tsyms=USD,EUR
-2. Websocket /api/currency/price
-Message
+2. Websocket /api/currency/price <br/> Message
 ```json
 {
   "fsyms": "BTC,ETH",
